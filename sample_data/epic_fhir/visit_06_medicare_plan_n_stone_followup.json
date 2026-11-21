@@ -1,0 +1,253 @@
+{
+  "resourceType": "Bundle",
+  "id": "eSYN-BUNDLE-0006",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:synthetic:Patient/eSYN-PT-0006",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "eSYN-PT-0006",
+        "gender": "male",
+        "birthDate": "1957-11-18",
+        "address": [
+          {
+            "postalCode": "55344",
+            "state": "MN"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Coverage/eSYN-COV-0006-1",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "eSYN-COV-0006-1",
+        "status": "active",
+        "order": 1,
+        "beneficiary": {
+          "reference": "Patient/eSYN-PT-0006"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "urn:synthetic:payer-type",
+              "code": "MEDICARE_B"
+            }
+          ],
+          "text": "Medicare Part B"
+        },
+        "payor": [
+          {
+            "display": "Medicare Part B"
+          }
+        ],
+        "period": {
+          "start": "2026-01-01"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Coverage/eSYN-COV-0006-2",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "eSYN-COV-0006-2",
+        "status": "active",
+        "order": 2,
+        "beneficiary": {
+          "reference": "Patient/eSYN-PT-0006"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "urn:synthetic:payer-type",
+              "code": "MEDIGAP"
+            }
+          ],
+          "text": "Medicare Supplement Plan N"
+        },
+        "payor": [
+          {
+            "display": "Medicare Supplement Plan N"
+          }
+        ],
+        "period": {
+          "start": "2026-01-01"
+        },
+        "class": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                  "code": "plan"
+                }
+              ]
+            },
+            "value": "PLAN_N"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Encounter/eSYN-ENC-0006",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "eSYN-ENC-0006",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/eSYN-PT-0006"
+        },
+        "participant": [
+          {
+            "individual": {
+              "identifier": {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "1999999984"
+              },
+              "display": "Synthetic Urologist, MD"
+            }
+          }
+        ],
+        "period": {
+          "start": "2026-11-10T09:00:00-06:00",
+          "end": "2026-11-10T09:40:00-06:00"
+        },
+        "location": [
+          {
+            "location": {
+              "display": "Example Urology Clinic"
+            }
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Condition/eSYN-DX-0006-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "eSYN-DX-0006-1",
+        "subject": {
+          "reference": "Patient/eSYN-PT-0006"
+        },
+        "encounter": {
+          "reference": "Encounter/eSYN-ENC-0006"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "N20.0"
+            }
+          ],
+          "text": "Kidney stone"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:DocumentReference/eSYN-NOTE-0006",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "eSYN-NOTE-0006",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/eSYN-PT-0006"
+        },
+        "date": "2026-11-10T09:40:00-06:00",
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/eSYN-ENC-0006"
+            }
+          ]
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "NjlNIGZvbGxvdy11cCBhZnRlciBwYXNzaW5nIGEgNCBtbSBraWRuZXkgc3RvbmUgbGFzdCBtb250aC4gU3RvbmUgYW5hbHlzaXM6IGNhbGNpdW0gb3hhbGF0ZS4gUmV2aWV3ZWQgMjQtaG91ciB1cmluZSByZXN1bHRzIHNob3dpbmcgbG93IHVyaW5lIHZvbHVtZSBhbmQgaGlnaCBzb2RpdW0uIENvdW5zZWxlZCBvbiBmbHVpZCBpbnRha2UgYW5kIGRpZXQ7IHN0YXJ0ZWQgcG90YXNzaXVtIGNpdHJhdGUuIFJlcGVhdCBpbWFnaW5nIGluIDYgbW9udGhzLiBNb2RlcmF0ZSBjb21wbGV4aXR5IGRlY2lzaW9uIG1ha2luZy4="
+            }
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

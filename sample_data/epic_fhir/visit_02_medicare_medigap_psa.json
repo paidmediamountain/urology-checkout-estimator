@@ -1,0 +1,327 @@
+{
+  "resourceType": "Bundle",
+  "id": "eSYN-BUNDLE-0002",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:synthetic:Patient/eSYN-PT-0002",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "eSYN-PT-0002",
+        "gender": "male",
+        "birthDate": "1958-07-22",
+        "address": [
+          {
+            "postalCode": "55345",
+            "state": "MN"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Coverage/eSYN-COV-0002-1",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "eSYN-COV-0002-1",
+        "status": "active",
+        "order": 1,
+        "beneficiary": {
+          "reference": "Patient/eSYN-PT-0002"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "urn:synthetic:payer-type",
+              "code": "MEDICARE_B"
+            }
+          ],
+          "text": "Medicare Part B"
+        },
+        "payor": [
+          {
+            "display": "Medicare Part B"
+          }
+        ],
+        "period": {
+          "start": "2026-01-01"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Coverage/eSYN-COV-0002-2",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "eSYN-COV-0002-2",
+        "status": "active",
+        "order": 2,
+        "beneficiary": {
+          "reference": "Patient/eSYN-PT-0002"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "urn:synthetic:payer-type",
+              "code": "MEDIGAP"
+            }
+          ],
+          "text": "Medicare Supplement Plan G"
+        },
+        "payor": [
+          {
+            "display": "Medicare Supplement Plan G"
+          }
+        ],
+        "period": {
+          "start": "2026-01-01"
+        },
+        "class": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                  "code": "plan"
+                }
+              ]
+            },
+            "value": "PLAN_G"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Encounter/eSYN-ENC-0002",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "eSYN-ENC-0002",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/eSYN-PT-0002"
+        },
+        "participant": [
+          {
+            "individual": {
+              "identifier": {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "1999999984"
+              },
+              "display": "Synthetic Urologist, MD"
+            }
+          }
+        ],
+        "period": {
+          "start": "2026-11-04T09:00:00-06:00",
+          "end": "2026-11-04T09:40:00-06:00"
+        },
+        "location": [
+          {
+            "location": {
+              "display": "Example Urology Clinic"
+            }
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Condition/eSYN-DX-0002-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "eSYN-DX-0002-1",
+        "subject": {
+          "reference": "Patient/eSYN-PT-0002"
+        },
+        "encounter": {
+          "reference": "Encounter/eSYN-ENC-0002"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "R97.20"
+            }
+          ],
+          "text": "Elevated prostate specific antigen"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Condition/eSYN-DX-0002-2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "eSYN-DX-0002-2",
+        "subject": {
+          "reference": "Patient/eSYN-PT-0002"
+        },
+        "encounter": {
+          "reference": "Encounter/eSYN-ENC-0002"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "N40.1"
+            }
+          ],
+          "text": "Enlarged prostate with urinary symptoms"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Procedure/eSYN-PROC-0002-1",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "eSYN-PROC-0002-1",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/eSYN-PT-0002"
+        },
+        "encounter": {
+          "reference": "Encounter/eSYN-ENC-0002"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "51798"
+            }
+          ],
+          "text": "Post-void residual bladder scan"
+        },
+        "performedDateTime": "2026-11-04T09:00:00-06:00",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:DocumentReference/eSYN-NOTE-0002",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "eSYN-NOTE-0002",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/eSYN-PT-0002"
+        },
+        "date": "2026-11-04T09:40:00-06:00",
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/eSYN-ENC-0002"
+            }
+          ]
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "NjhNIGZvbGxvdy11cCBmb3IgUFNBIG9mIDUuOCwgdXAgZnJvbSA0LjkgYSB5ZWFyIGFnby4gV2VhayBzdHJlYW0gYW5kIG5pZ2h0dGltZSB1cmluYXRpb24gdHdpY2UgbmlnaHRseSwgc3RhYmxlIG9uIHRhbXN1bG9zaW4uIEJsYWRkZXIgc2NhbiBhZnRlciB2b2lkaW5nOiA2MiBtTCByZXNpZHVhbC4gRXhhbTogcHJvc3RhdGUgZW5sYXJnZWQsIHNtb290aCwgbm8gbm9kdWxlLiBEaXNjdXNzZWQgTVJJIHZlcnN1cyByZXBlYXQgUFNBIGluIDMgbW9udGhzOyBwYXRpZW50IHByZWZlcnMgcmVwZWF0IFBTQS4gTG93IGNvbXBsZXhpdHkgZGVjaXNpb24gbWFraW5nLg=="
+            }
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

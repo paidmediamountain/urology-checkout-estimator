@@ -1,0 +1,235 @@
+{
+  "resourceType": "Bundle",
+  "id": "eSYN-BUNDLE-0001",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:synthetic:Patient/eSYN-PT-0001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "eSYN-PT-0001",
+        "gender": "male",
+        "birthDate": "1955-03-14",
+        "address": [
+          {
+            "postalCode": "55344",
+            "state": "MN"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Coverage/eSYN-COV-0001-1",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "eSYN-COV-0001-1",
+        "status": "active",
+        "order": 1,
+        "beneficiary": {
+          "reference": "Patient/eSYN-PT-0001"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "urn:synthetic:payer-type",
+              "code": "MEDICARE_B"
+            }
+          ],
+          "text": "Medicare Part B"
+        },
+        "payor": [
+          {
+            "display": "Medicare Part B"
+          }
+        ],
+        "period": {
+          "start": "2026-01-01"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Encounter/eSYN-ENC-0001",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "eSYN-ENC-0001",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/eSYN-PT-0001"
+        },
+        "participant": [
+          {
+            "individual": {
+              "identifier": {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "1999999984"
+              },
+              "display": "Synthetic Urologist, MD"
+            }
+          }
+        ],
+        "period": {
+          "start": "2026-11-03T09:00:00-06:00",
+          "end": "2026-11-03T09:40:00-06:00"
+        },
+        "location": [
+          {
+            "location": {
+              "display": "Example Urology Clinic"
+            }
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Condition/eSYN-DX-0001-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "eSYN-DX-0001-1",
+        "subject": {
+          "reference": "Patient/eSYN-PT-0001"
+        },
+        "encounter": {
+          "reference": "Encounter/eSYN-ENC-0001"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "R31.0"
+            }
+          ],
+          "text": "Gross hematuria"
+        },
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:Procedure/eSYN-PROC-0001-1",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "eSYN-PROC-0001-1",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/eSYN-PT-0001"
+        },
+        "encounter": {
+          "reference": "Encounter/eSYN-ENC-0001"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "52000"
+            }
+          ],
+          "text": "Cystoscopy, diagnostic"
+        },
+        "performedDateTime": "2026-11-03T09:00:00-06:00",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:synthetic:DocumentReference/eSYN-NOTE-0001",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "eSYN-NOTE-0001",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "11506-3",
+              "display": "Progress note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/eSYN-PT-0001"
+        },
+        "date": "2026-11-03T09:40:00-06:00",
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/eSYN-ENC-0001"
+            }
+          ]
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "NzFNIGVzdGFibGlzaGVkIHBhdGllbnQsIHR3byBlcGlzb2RlcyBvZiB2aXNpYmxlIGJsb29kIGluIHVyaW5lIG92ZXIgdGhlIHBhc3QgbW9udGgsIG5vIHBhaW4sIGZvcm1lciBzbW9rZXIuIFJldmlld2VkIENUIHVyb2dyYW0gZnJvbSBvdXRzaWRlIGZhY2lsaXR5OiBubyB1cHBlciB0cmFjdCBsZXNpb24uIERpc2N1c3NlZCBuZWVkIGZvciBibGFkZGVyIGV2YWx1YXRpb247IHBhdGllbnQgY29uc2VudGVkLiBGbGV4aWJsZSBjeXN0b3Njb3B5IHBlcmZvcm1lZCBpbiBvZmZpY2UgdG9kYXk6IHVyZXRocmEgbm9ybWFsLCBtb2RlcmF0ZSBwcm9zdGF0aWMgZW5sYXJnZW1lbnQsIGJsYWRkZXIgbXVjb3NhIG5vcm1hbCwgbm8gdHVtb3Igb3Igc3RvbmUuIFBsYW46IHVyaW5lIGN5dG9sb2d5LCByZXR1cm4gaW4gNiBtb250aHMuIE1vZGVyYXRlIGNvbXBsZXhpdHkgZGVjaXNpb24gbWFraW5nLg=="
+            }
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:synthetic",
+              "code": "SYNTHETIC",
+              "display": "Synthetic test data"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

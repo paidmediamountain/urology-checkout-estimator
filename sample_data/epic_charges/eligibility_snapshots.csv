@@ -1,0 +1,7 @@
+encounter_id,coverage_id,checked_at,deductible_remaining,coinsurance_pct,copay_amt,oop_remaining,is_qmb,has_secondary
+eSYN-ENC-0001,eSYN-COV-0001-1,2026-11-03 09:42:00,0,20,0,,False,False
+eSYN-ENC-0002,eSYN-COV-0002-1,2026-11-04 09:42:00,0,20,0,,False,True
+eSYN-ENC-0003,eSYN-COV-0003-1,2026-11-05 09:42:00,0,20,0,,True,True
+eSYN-ENC-0004,eSYN-COV-0004-1,2026-11-06 09:42:00,1400,20,0,4000,False,False
+eSYN-ENC-0005,eSYN-COV-0005-1,2026-11-09 09:42:00,250,20,40,3000,False,False
+eSYN-ENC-0006,eSYN-COV-0006-1,2026-11-10 09:42:00,0,20,0,,False,True
